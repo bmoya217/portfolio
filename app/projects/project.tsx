@@ -1,18 +1,26 @@
 import { Tags } from "@/components/Tags";
-import { projects } from "./data";
+import { Project as ProjectType } from "./data";
+import { ExternalLink } from "lucide-react";
 
 type Props = {
-  project: (typeof projects)[0];
+  project: ProjectType;
 };
 
 export const Project = ({ project }: Props) => {
   return (
-    <article
-      key={project.title}
-      className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-colors hover:border-muted hover:shadow-md"
-    >
+    <article className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-colors hover:border-muted hover:shadow-md">
       <div>
-        <h2 className="text-xl font-semibold">{project.title}</h2>
+        <div className="flex flex-row justify-between">
+          <h2 className="text-xl font-semibold">{project.title}</h2>
+          {project.link && (
+            <a href={project.link} target="_blank" rel="noreferrer">
+              <ExternalLink
+                size={18}
+                className="text-muted hover:text-foreground"
+              />
+            </a>
+          )}
+        </div>
 
         <p className="text-sm text-muted mt-1">
           {project.company} · {project.period}

@@ -1,7 +1,7 @@
-import { experience } from "./data";
+import { Job } from "./data";
 
 type Props = {
-  job: (typeof experience)[0];
+  job: Job;
 };
 
 export const JobCard = ({ job }: Props) => {

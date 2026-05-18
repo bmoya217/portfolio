@@ -1,3 +1,13 @@
+export type Project = {
+  title: string;
+  company: string;
+  period: string;
+  stack: string[];
+  description: string;
+  highlights: string[];
+  link?: string;
+};
+
 export const projects = [
   {
     title: "Common Track Manager",
@@ -68,6 +78,7 @@ export const projects = [
       "Implemented responsive UI with mobile-first table redesign",
       "Evolved system to auto-map simulation data, reducing manual maintenance per raid tier",
     ],
+    link: "https://drops-vercel-flax.vercel.app/",
   },
 
   {

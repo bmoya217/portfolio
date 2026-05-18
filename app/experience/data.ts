@@ -1,17 +1,19 @@
-export const experience = [
+export type Job = {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  stack: string[];
+  highlights: string[];
+};
+export const Jobs: Job[] = [
   {
     company: "Viasat",
     role: "Software Engineer",
     period: "Oct 2021 – Jul 2023",
     description:
       "Worked on customer billing and account management systems supporting both customer-facing applications and internal operational tools.",
-    stack: [
-      "React",
-      "GraphQL",
-      "REST APIs",
-      "Kibana",
-      "Micro Frontends",
-    ],
+    stack: ["React", "GraphQL", "REST APIs", "Kibana", "Micro Frontends"],
     highlights: [
       "Developed billing micro-frontend systems for customers and internal Salesforce agents",
       "Built and maintained backend integrations for customer account systems",

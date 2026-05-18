@@ -1,4 +1,4 @@
-import { experience } from "./data";
+import { Jobs } from "./data";
 import { JobCard } from "./JobCard";
 
 const Experience = () => {
@@ -22,7 +22,7 @@ const Experience = () => {
 
       {/* timeline */}
       <section className="mt-20 space-y-10">
-        {experience.map((job) => (
+        {Jobs.map((job) => (
           <JobCard job={job} key={job.company} />
         ))}
       </section>
