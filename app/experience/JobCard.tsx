@@ -1,4 +1,6 @@
+import { Tags } from "@/components/Tags";
 import { Job } from "./data";
+import { Highlights } from "@/components/Highlights";
 
 type Props = {
   job: Job;
@@ -7,49 +9,28 @@ type Props = {
 export const JobCard = ({ job }: Props) => {
   return (
     <article key={job.company} className="card">
-      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+      <div className="responsive-layout md:justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-semibold">{job.role}</h2>
+          <h2 className="card-header">{job.role}</h2>
 
-          <p className="text-muted mt-1">{job.company}</p>
+          <p className="mt-1">{job.company}</p>
         </div>
 
-        <p className="text-sm text-muted">{job.period}</p>
+        <p>{job.period}</p>
       </div>
 
-      <p className="max-w-3xl leading-7 text-muted mt-6">{job.description}</p>
+      <p className="card-description mt-6">{job.description}</p>
 
-      <div className="flex flex-row md:flex-col gap-6 mt-6">
+      <div className="responsive-layout mt-6">
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide">
-            Highlights
-          </h3>
-
-          <ul className="text-sm text-muted space-y-3 mt-3">
-            {job.highlights.map((highlight) => (
-              <li key={highlight} className="flex gap-2">
-                <span className="text-foreground">•</span>
-                <span>{highlight}</span>
-              </li>
-            ))}
-          </ul>
+          <h3 className="card-subheader">Highlights</h3>
+          <Highlights items={job.highlights} />
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide">
-            Technologies
-          </h3>
+          <h3 className="card-subheader">Technologies</h3>
 
-          <div className="flex flex-wrap gap-2 mt-3">
-            {job.stack.map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-border px-3 py-1 text-sm text-muted"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          <Tags items={job.stack} />
         </div>
       </div>
     </article>

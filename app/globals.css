@@ -39,12 +39,18 @@
 }
 
 @layer components {
-  .page-container {
-    @apply mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-16 md:py-24;
+  .responsive-layout {
+    @apply flex flex-col md:flex-row gap-6;
   }
 
+  .page-container {
+    @apply mx-auto flex flex-1 w-full max-w-6xl flex-col px-6 py-8 md:py-16;
+  }
+
+
+
   .section-container {
-    @apply max-w-3xl;
+    @apply max-w-3xl py-8 md:py-16;
   }
 
   .section-title {
@@ -52,27 +58,43 @@
   }
 
   .section-header {
-    @apply mt-3 text-4xl font-bold tracking-tight md:text-5xl;
+    @apply font-bold text-4xl md:text-5xl tracking-tight mt-3;
   }
 
   .section-subheader {
-    @apply mt-2 text-2xl font-bold md:text-3xl;
+    @apply font-semibold text-xl md:text-3xl mt-2;
   }
 
   .section-description {
-    @apply mt-6 text-lg leading-8 text-muted;
+    @apply text-lg text-muted leading-8 mt-6;
   }
 
   .card {
-    @apply rounded-2xl border border-border bg-card p-6 text-card-foreground shadow-sm transition-colors hover:border-muted hover:shadow-md;
+    @apply rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted p-6;
   }
 
   .card-header {
-    @apply text-xl font-semibold;
+    @apply text-card-foreground text-xl font-semibold;
+  }
+
+  .card-subheader {
+    @apply text-card-foreground text-lg font-semibold;
+  }
+
+  .card-description {
+    @apply max-w-3xl leading-7;
+  }
+
+  .card-link-label {
+    @apply text-sm uppercase tracking-wide text-muted;
   }
 
   .card-link {
-    @apply mt-1 inline-block text-lg hover:underline underline-offset-4;
+    @apply text-card-foreground text-lg hover:underline underline-offset-4 mt-1;
+  }
+
+  .card-stat {
+    @apply text-card-foreground text-3xl font-bold;
   }
 
   .tag {

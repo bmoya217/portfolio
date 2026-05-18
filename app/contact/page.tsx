@@ -25,16 +25,13 @@ const Contact = () => {
         </p>
       </section>
 
-      <section className="flex flex-col md:flex-row gap-6 mt-16">
-        {/* contact card */}
+      <section className="responsive-layout mt-16">
         <article className="card flex-1">
           <h2 className="card-header">Get in touch</h2>
 
           <div className="space-y-6 mt-8">
             <div>
-              <p className="text-sm uppercase tracking-wide text-muted">
-                Email
-              </p>
+              <p className="card-link-label">Email</p>
 
               <a href="mailto:bmoya217@gmail.com" className="card-link">
                 bmoya217@gmail.com
@@ -42,9 +39,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <p className="text-sm uppercase tracking-wide text-muted">
-                LinkedIn
-              </p>
+              <p className="card-link-label">LinkedIn</p>
 
               <a
                 href="https://linkedin.com/in/branden-moya"
@@ -57,9 +52,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <p className="text-sm uppercase tracking-wide text-muted">
-                GitHub
-              </p>
+              <p className="card-link-label">GitHub</p>
 
               <a
                 href="https://github.com/bmoya217"
@@ -73,13 +66,12 @@ const Contact = () => {
           </div>
         </article>
 
-        {/* side panel */}
         <article className="card flex-1">
           <h2 className="card-header">Focus Areas</h2>
 
-          <Tags tags={skills} />
+          <Tags items={skills} />
 
-          <p className="leading-7 text-muted mt-8">
+          <p className="card-description mt-8">
             Currently interested in frontend-focused full stack roles involving
             modern React ecosystems, internal tooling, product engineering, or
             platform development.

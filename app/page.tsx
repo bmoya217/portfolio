@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { projects } from "./projects/data";
 import { Project } from "./projects/project";
@@ -12,6 +10,7 @@ const skills = [
   "Redux",
   "Tailwind",
   "GraphQL",
+  "SQL",
   "REST APIs",
 ];
 
@@ -35,7 +34,8 @@ const project = projects.find((project) => project.title.startsWith("Drops"));
 const Home = () => {
   return (
     <main className="page-container">
-      <section className="flex flex-col gap-10 md:flex-row md:items-center">
+      <section className="section-container responsive-layout md:items-center max-w-6xl">
+        {/* left */}
         <div className="flex-2">
           <p className="section-title">Full Stack Developer</p>
 
@@ -51,39 +51,40 @@ const Home = () => {
           </p>
         </div>
 
+        {/* right */}
         <div className="card flex-1">
           <p className="card-header">Core Stack</p>
 
-          <Tags tags={skills} />
+          <Tags items={skills} />
 
           <div className="flex flex-row gap-4 mt-8">
             <div className="flex-1">
-              <p className="text-3xl font-bold">5+</p>
-              <p className="text-sm text-muted">Years experience</p>
+              <p className="card-stat">5+</p>
+              <p>Years experience</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-3xl font-bold">6</p>
-              <p className="text-sm text-muted">Featured projects</p>
+              <p className="card-stat">6</p>
+              <p>Featured projects</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* featured work */}
+      {/* drops */}
       {project && (
         <section className="mt-18">
-          <div className="flex items-end justify-between gap-4 mb-8 ">
+          <div className="flex items-end justify-between gap-4 mb-8">
             <div>
               <p className="section-title">Featured Work</p>
               <h2 className="section-subheader">
-                Solving life's problems on line at a time
+                Solving real problems one interface at a time.
               </h2>
             </div>
 
             <Link
               href="/projects"
-              className="hidden text-sm font-medium text-muted hover:text-foreground md:block"
+              className="hidden md:block text-sm font-medium text-muted hover:text-foreground"
             >
               View all →
             </Link>
@@ -93,11 +94,11 @@ const Home = () => {
       )}
 
       {/* strengths */}
-      <section className="flex flex-col md:flex-row gap-6 mt-18">
+      <section className="responsive-layout mt-18">
         {strengths.map((item) => (
           <div key={item.title} className="card flex-1">
-            <h3 className="font-semibold">{item.title}</h3>
-            <p className="text-sm leading-6 text-muted mt-3">{item.text}</p>
+            <h3 className="card-subheader">{item.title}</h3>
+            <p className="card-description mt-3">{item.text}</p>
           </div>
         ))}
       </section>

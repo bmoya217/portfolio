@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="w-full border-t border-border">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-6 py-8 text-sm text-muted md:flex-row">
+      <div className="responsive-layout mx-auto max-w-5xl items-center justify-between px-6 py-8 text-sm text-muted">
         {/* left */}
         <div className="text-center md:text-left">
           <p className="mt-1">
