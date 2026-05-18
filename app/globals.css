@@ -3,24 +3,84 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
   --muted: #6b7280;
   --hover: #000000;
+
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --border: #e5e7eb;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --muted: #a3a3a3;
+  --background: #09090b;
+  --foreground: #fafafa;
+
+  --muted: #a1a1aa;
   --hover: #ffffff;
+
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --border: #27272a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-muted: var(--muted);
   --color-hover: var(--hover);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+}
+
+@layer components {
+  .page-container {
+    @apply mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-16 md:py-24;
+  }
+
+  .section-container {
+    @apply max-w-3xl;
+  }
+
+  .section-title {
+    @apply text-sm font-medium uppercase tracking-widest text-muted mb-4;
+  }
+
+  .section-header {
+    @apply mt-3 text-4xl font-bold tracking-tight md:text-5xl;
+  }
+
+  .section-subheader {
+    @apply mt-2 text-2xl font-bold md:text-3xl;
+  }
+
+  .section-description {
+    @apply mt-6 text-lg leading-8 text-muted;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-card p-6 text-card-foreground shadow-sm transition-colors hover:border-muted hover:shadow-md;
+  }
+
+  .card-header {
+    @apply text-xl font-semibold;
+  }
+
+  .card-text {
+  }
+
+  .card-link {
+    @apply mt-1 inline-block text-lg hover:underline underline-offset-4;
+  }
+
+  .tag {
+    @apply rounded-full border border-border px-3 py-1 text-sm text-muted;
+  }
 }
 
 body {

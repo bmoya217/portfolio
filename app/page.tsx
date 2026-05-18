@@ -1,105 +1,103 @@
 "use client";
 
 import Link from "next/link";
+import { projects } from "./projects/data";
+import { Project } from "./projects/project";
+import { Tags } from "@/components/Tags";
+
+const skills = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Redux",
+  "Tailwind",
+  "GraphQL",
+  "REST APIs",
+];
+
+const strengths = [
+  {
+    title: "Frontend polish",
+    text: "Responsive layouts, readable UI, clean component structure, and user-focused interactions.",
+  },
+  {
+    title: "Backend integration",
+    text: "Experience connecting React apps to GraphQL, REST APIs, Java services, and internal systems.",
+  },
+  {
+    title: "Real product work",
+    text: "Worked on billing, customer self-service, geospatial tools, and data-heavy internal workflows.",
+  },
+];
+
+const project = projects.find((project) => project.title.startsWith("Drops"));
 
 const Home = () => {
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-16 md:py-24">
-      <section className="grid gap-10 md:grid-cols-[1.3fr_0.7fr] md:items-center">
-        <div>
-          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-muted">
-            Full Stack Developer
-          </p>
+    <main className="page-container">
+      <section className="flex flex-col gap-10 md:flex-row md:items-center">
+        <div className="flex-2">
+          <p className="section-title">Full Stack Developer</p>
 
-          <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
+          <h1 className="section-header">
             I build clean, practical web apps that connect frontend polish with
             real backend systems.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
+          <p className="section-description">
             I’m Branden, a full stack developer with experience across React,
             Next.js, TypeScript, GraphQL, REST APIs, Java systems, geospatial
             visualization, billing flows, and internal enterprise tools.
           </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/projects"
-              className="rounded-lg bg-foreground px-5 py-3 text-sm font-medium text-background transition hover:opacity-85"
-            >
-              View Projects
-            </Link>
-
-            <Link
-              href="/contact"
-              className="rounded-lg border border-border px-5 py-3 text-sm font-medium transition hover:border-muted"
-            >
-              Contact
-            </Link>
-          </div>
         </div>
 
-        <aside className="rounded-2xl border border-border bg-card p-6 text-card-foreground shadow-sm">
-          <p className="text-sm uppercase tracking-widest text-muted">
-            Core Stack
-          </p>
+        <div className="card flex-1">
+          <p className="card-header">Core Stack</p>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            {[
-              "React",
-              "Next.js",
-              "TypeScript",
-              "Tailwind",
-              "GraphQL",
-              "REST APIs",
-              "Java",
-              "Vercel",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-border px-3 py-1 text-sm text-muted"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+          <Tags tags={skills} />
 
-          <div className="mt-8 grid grid-cols-2 gap-4">
-            <div>
+          <div className="flex flex-row gap-4 mt-8">
+            <div className="flex-1">
               <p className="text-3xl font-bold">5+</p>
               <p className="text-sm text-muted">Years experience</p>
             </div>
 
-            <div>
+            <div className="flex-1">
               <p className="text-3xl font-bold">6</p>
               <p className="text-sm text-muted">Featured projects</p>
             </div>
           </div>
-        </aside>
+        </div>
       </section>
 
+      {/* featured work */}
+      {project && (
+        <section className="mt-18">
+          <div className="flex items-end justify-between gap-4 mb-8 ">
+            <div>
+              <p className="section-title">Featured Work</p>
+              <h2 className="section-subheader">
+                Solving life's problems on line at a time
+              </h2>
+            </div>
+
+            <Link
+              href="/projects"
+              className="hidden text-sm font-medium text-muted hover:text-foreground md:block"
+            >
+              View all →
+            </Link>
+          </div>
+          <Project project={project} />
+        </section>
+      )}
+
       {/* strengths */}
-      <section className="mt-24 grid gap-6 md:grid-cols-3">
-        {[
-          {
-            title: "Frontend polish",
-            text: "Responsive layouts, readable UI, clean component structure, and user-focused interactions.",
-          },
-          {
-            title: "Backend integration",
-            text: "Experience connecting React apps to GraphQL, REST APIs, Java services, and internal systems.",
-          },
-          {
-            title: "Real product work",
-            text: "Worked on billing, customer self-service, geospatial tools, and data-heavy internal workflows.",
-          },
-        ].map((item) => (
-          <div
-            key={item.title}
-            className="rounded-2xl border border-border bg-card p-6 shadow-sm"
-          >
+      <section className="flex flex-col md:flex-row gap-6 mt-18">
+        {strengths.map((item) => (
+          <div key={item.title} className="card flex-1">
             <h3 className="font-semibold">{item.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-muted">{item.text}</p>
+            <p className="text-sm leading-6 text-muted mt-3">{item.text}</p>
           </div>
         ))}
       </section>

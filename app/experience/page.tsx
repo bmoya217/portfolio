@@ -1,7 +1,33 @@
-export default function Home() {
+import { experience } from "./data";
+import { JobCard } from "./JobCard";
+
+const Experience = () => {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-white font-sans dark:bg-black">
-      experience
-    </div>
+    <main className="page-container">
+      {/* header */}
+      <section className="max-w-3xl">
+        <p className="section-title">Experience</p>
+
+        <h1 className="section-header">
+          Building full stack applications, internal tools, and customer-facing
+          systems.
+        </h1>
+
+        <p className="section-description">
+          Around 5 years of professional experience across frontend development,
+          backend services, enterprise integrations, geospatial visualization,
+          and cloud-connected systems.
+        </p>
+      </section>
+
+      {/* timeline */}
+      <section className="mt-20 space-y-10">
+        {experience.map((job) => (
+          <JobCard job={job} key={job.company} />
+        ))}
+      </section>
+    </main>
   );
-}
+};
+
+export default Experience;
