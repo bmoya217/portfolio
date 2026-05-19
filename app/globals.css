@@ -68,7 +68,7 @@
   }
 
   .card {
-    @apply rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted space-y-8 p-6;
+    @apply rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted space-y-4 md:space-y-8 p-6;
   }
 
   .card-header {
@@ -84,7 +84,7 @@
   }
 
   .card-description {
-    @apply max-w-3xl leading-7 mt-4;
+    @apply max-w-3xl leading-7;
   }
 
   .card-link-label {
