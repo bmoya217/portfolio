@@ -15,13 +15,11 @@ const links = [
 ];
 
 const getLinkClass = (pathname: string, href: string): string => {
-  const base = "transition-colors duration-200 underline-offset-4";
-
   if (pathname === href) {
-    return `${base} underline decoration-2`;
+    return "underline underline-offset-4 decoration-2";
   }
 
-  return `${base} text-muted hover:text-foreground`;
+  return "link";
 };
 
 export const Header = () => {
@@ -34,7 +32,7 @@ export const Header = () => {
         {/* left */}
         <Link
           href="/"
-          className="flex items-center gap-3 transition-opacity hover:opacity-90"
+          className="flex items-center transition-opacity hover:opacity-90 gap-3"
         >
           <Image
             src="/profile.jpg"

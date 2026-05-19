@@ -9,28 +9,26 @@ type Props = {
 
 export const Project = ({ project }: Props) => {
   return (
-    <article className="card flex flex-col">
-      <div>
-        <div className="flex flex-row justify-between">
+    <article className="card">
+      <div className="flex flex-row justify-between">
+        <div>
           <h2 className="card-header">{project.title}</h2>
-          {project.link && (
-            <a href={project.link} target="_blank" rel="noreferrer">
-              <ExternalLink
-                size={18}
-                className="text-muted hover:text-foreground"
-              />
-            </a>
-          )}
+          <p className="card-text">
+            {project.company} · {project.period}
+          </p>
         </div>
 
-        <p className="card-text mt-1">
-          {project.company} · {project.period}
-        </p>
+        {project.link && (
+          <a href={project.link} target="_blank" rel="noreferrer">
+            <ExternalLink size={18} className="link" />
+          </a>
+        )}
       </div>
 
-      <p className="card-description mt-4">{project.description}</p>
-
-      <Highlights items={project.highlights} />
+      <div>
+        <p className="card-description">{project.description}</p>
+        <Highlights items={project.highlights} />
+      </div>
 
       <Tags items={project.stack} />
     </article>

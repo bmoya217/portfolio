@@ -2,6 +2,8 @@ import Link from "next/link";
 import { projects } from "./projects/data";
 import { Project } from "./projects/project";
 import { Tags } from "@/components/Tags";
+import { Stat } from "@/components/Stat";
+import { ArrowRight } from "lucide-react";
 
 const skills = [
   "React",
@@ -34,9 +36,9 @@ const project = projects.find((project) => project.title.startsWith("Drops"));
 const Home = () => {
   return (
     <main className="page-container">
-      <section className="section-container responsive-layout md:items-center max-w-6xl">
+      <section className="responsive-layout md:items-center max-w-6xl">
         {/* left */}
-        <div className="flex-2">
+        <div className="page-intro flex-2">
           <p className="section-title">Full Stack Developer</p>
 
           <h1 className="section-header">
@@ -57,24 +59,17 @@ const Home = () => {
 
           <Tags items={skills} />
 
-          <div className="flex flex-row gap-4 mt-8">
-            <div className="flex-1">
-              <p className="card-stat">5+</p>
-              <p>Years experience</p>
-            </div>
-
-            <div className="flex-1">
-              <p className="card-stat">6</p>
-              <p>Featured projects</p>
-            </div>
+          <div className="flex flex-row gap-4">
+            <Stat label="Years experience" value={"5+"} />
+            <Stat label="Featured projects" value={"6"} />
           </div>
         </div>
       </section>
 
       {/* drops */}
       {project && (
-        <section className="mt-18">
-          <div className="flex items-end justify-between gap-4 mb-8">
+        <section>
+          <div className="flex items-end justify-between gap-4">
             <div>
               <p className="section-title">Featured Work</p>
               <h2 className="section-subheader">
@@ -84,21 +79,25 @@ const Home = () => {
 
             <Link
               href="/projects"
-              className="hidden md:block text-sm font-medium text-muted hover:text-foreground"
+              className="link hidden md:flex flex-row text-sm font-medium items-center gap-1"
             >
-              View all →
+              View all
+              <ArrowRight size={14} />
             </Link>
           </div>
-          <Project project={project} />
+
+          <div className="mt-8">
+            <Project project={project} />
+          </div>
         </section>
       )}
 
       {/* strengths */}
-      <section className="responsive-layout mt-18">
+      <section className="responsive-layout">
         {strengths.map((item) => (
           <div key={item.title} className="card flex-1">
             <h3 className="card-subheader">{item.title}</h3>
-            <p className="card-description mt-3">{item.text}</p>
+            <p className="card-description">{item.text}</p>
           </div>
         ))}
       </section>

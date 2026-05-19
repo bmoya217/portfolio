@@ -4,9 +4,7 @@ export const Footer = () => {
       <div className="responsive-layout mx-auto max-w-5xl items-center justify-between px-6 py-8 text-sm text-muted">
         {/* left */}
         <div className="text-center md:text-left">
-          <p className="mt-1">
-            Full Stack Developer · React · TypeScript · Next.js · GraphQL
-          </p>
+          <p>Full Stack Developer · React · TypeScript · Next.js · GraphQL</p>
         </div>
 
         {/* right */}
@@ -15,7 +13,7 @@ export const Footer = () => {
             href="https://github.com/bmoya217"
             target="_blank"
             rel="noreferrer"
-            className="transition-colors hover:text-foreground"
+            className="link"
           >
             GitHub
           </a>
@@ -24,15 +22,12 @@ export const Footer = () => {
             href="https://linkedin.com/in/branden-moya"
             target="_blank"
             rel="noreferrer"
-            className="transition-colors hover:text-foreground"
+            className="link"
           >
             LinkedIn
           </a>
 
-          <a
-            href="mailto:bmoya217@gmail.com"
-            className="transition-colors hover:text-foreground"
-          >
+          <a href="mailto:bmoya217@gmail.com" className="link">
             Email
           </a>
 
@@ -40,7 +35,7 @@ export const Footer = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="transition-colors hover:text-foreground"
+            className="link"
           >
             Resume
           </a>

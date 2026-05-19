@@ -4,7 +4,7 @@ type Props = {
 
 export const Tags = ({ items }: Props) => {
   return (
-    <div className="flex flex-wrap gap-2 mt-6">
+    <div className="flex flex-wrap gap-2">
       {items.map((tag) => (
         <span key={tag} className="tag">
           {tag}

@@ -4,7 +4,7 @@ import { Project } from "./project";
 const Projects = () => {
   return (
     <main className="page-container">
-      <section className="section-container">
+      <section className="page-intro">
         <p className="section-title">Projects</p>
 
         <h1 className="section-header">
@@ -19,7 +19,7 @@ const Projects = () => {
         </p>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-6 mt-8">
+      <section className="grid md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <Project project={project} key={project.title} />
         ))}

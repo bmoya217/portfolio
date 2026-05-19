@@ -4,7 +4,7 @@ import { JobCard } from "./JobCard";
 const Experience = () => {
   return (
     <main className="page-container">
-      <section className="section-container">
+      <section className="page-intro">
         <p className="section-title">Experience</p>
 
         <h1 className="section-header">
@@ -19,7 +19,7 @@ const Experience = () => {
         </p>
       </section>
 
-      <section className="space-y-10 mt-16">
+      <section className="cards-container">
         {Jobs.map((job) => (
           <JobCard job={job} key={job.company} />
         ))}

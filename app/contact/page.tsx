@@ -14,7 +14,7 @@ const skills = [
 const Contact = () => {
   return (
     <main className="page-container">
-      <section className="section-container">
+      <section className="page-intro">
         <p className="section-title">Contact</p>
 
         <h1 className="section-header">Let’s build something.</h1>
@@ -25,44 +25,42 @@ const Contact = () => {
         </p>
       </section>
 
-      <section className="responsive-layout mt-16">
+      <section className="responsive-layout">
         <article className="card flex-1">
           <h2 className="card-header">Get in touch</h2>
 
-          <div className="space-y-6 mt-8">
-            <div>
-              <p className="card-link-label">Email</p>
+          <div>
+            <p className="card-link-label">Email</p>
 
-              <a href="mailto:bmoya217@gmail.com" className="card-link">
-                bmoya217@gmail.com
-              </a>
-            </div>
+            <a href="mailto:bmoya217@gmail.com" className="card-link">
+              bmoya217@gmail.com
+            </a>
+          </div>
 
-            <div>
-              <p className="card-link-label">LinkedIn</p>
+          <div>
+            <p className="card-link-label">LinkedIn</p>
 
-              <a
-                href="https://linkedin.com/in/branden-moya"
-                target="_blank"
-                rel="noreferrer"
-                className="card-link"
-              >
-                linkedin.com/in/branden-moya
-              </a>
-            </div>
+            <a
+              href="https://linkedin.com/in/branden-moya"
+              target="_blank"
+              rel="noreferrer"
+              className="card-link"
+            >
+              linkedin.com/in/branden-moya
+            </a>
+          </div>
 
-            <div>
-              <p className="card-link-label">GitHub</p>
+          <div>
+            <p className="card-link-label">GitHub</p>
 
-              <a
-                href="https://github.com/bmoya217"
-                target="_blank"
-                rel="noreferrer"
-                className="card-link"
-              >
-                github.com/bmoya217
-              </a>
-            </div>
+            <a
+              href="https://github.com/bmoya217"
+              target="_blank"
+              rel="noreferrer"
+              className="card-link"
+            >
+              github.com/bmoya217
+            </a>
           </div>
         </article>
 
@@ -71,7 +69,7 @@ const Contact = () => {
 
           <Tags items={skills} />
 
-          <p className="card-description mt-8">
+          <p className="card-description">
             Currently interested in frontend-focused full stack roles involving
             modern React ecosystems, internal tooling, product engineering, or
             platform development.

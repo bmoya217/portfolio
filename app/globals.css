@@ -39,22 +39,16 @@
 }
 
 @layer components {
-  .responsive-layout {
-    @apply flex flex-col md:flex-row gap-6;
-  }
-
   .page-container {
-    @apply mx-auto flex flex-1 w-full max-w-6xl flex-col px-6 py-8 md:py-16;
+    @apply mx-auto flex flex-1 w-full max-w-6xl flex-col px-6 py-8 md:py-16 space-y-16 md:space-y-24;
   }
 
-
-
-  .section-container {
-    @apply max-w-3xl py-8 md:py-16;
+  .page-intro {
+    @apply max-w-3xl;
   }
 
   .section-title {
-    @apply text-sm font-medium uppercase tracking-widest text-muted mb-4;
+    @apply text-sm font-medium uppercase tracking-widest text-muted;
   }
 
   .section-header {
@@ -69,8 +63,12 @@
     @apply text-lg text-muted leading-8 mt-6;
   }
 
+  .cards-container {
+    @apply space-y-8;
+  }
+
   .card {
-    @apply rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted p-6;
+    @apply rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted space-y-8 p-6;
   }
 
   .card-header {
@@ -81,8 +79,12 @@
     @apply text-card-foreground text-lg font-semibold;
   }
 
+  .card-text {
+    @apply max-w-3xl mt-1;
+  }
+
   .card-description {
-    @apply max-w-3xl leading-7;
+    @apply max-w-3xl leading-7 mt-4;
   }
 
   .card-link-label {
@@ -99,6 +101,17 @@
 
   .tag {
     @apply rounded-full border border-border px-3 py-1 text-sm text-muted;
+  }
+
+  .link {
+    @apply text-muted hover:text-foreground transition-colors duration-200;
+  }
+
+  .responsive-layout {
+    @apply flex flex-col md:flex-row gap-6;
+  }
+
+  .card-layout {
   }
 }
 
