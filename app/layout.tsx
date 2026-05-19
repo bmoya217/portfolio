@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Branden Moya | Full Stack Developer",
+  title: "Branden Moya | Portfolio",
   description:
-    "Full stack developer portfolio for Branden Moya, featuring React, Next.js, TypeScript, backend integrations, and enterprise web applications.",
+    "Full stack developer portfolio for Branden Moya.",
 };
 
 export default function RootLayout({
