@@ -26,7 +26,7 @@ const Contact = () => {
       </section>
 
       <section className="responsive-layout">
-        <article className="card flex-1">
+        <div className="card flex-1">
           <h2 className="card-header">Get in touch</h2>
 
           <div>
@@ -62,9 +62,9 @@ const Contact = () => {
               github.com/bmoya217
             </a>
           </div>
-        </article>
+        </div>
 
-        <article className="card flex-1">
+        <div className="card flex-1">
           <h2 className="card-header">Focus Areas</h2>
 
           <Tags items={skills} />
@@ -74,7 +74,7 @@ const Contact = () => {
             modern React ecosystems, internal tooling, product engineering, or
             platform development.
           </p>
-        </article>
+        </div>
       </section>
     </main>
   );

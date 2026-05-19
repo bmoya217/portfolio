@@ -7,7 +7,7 @@ type Props = {
   project: ProjectType;
 };
 
-export const Project = ({ project }: Props) => {
+export const ProjectCard = ({ project }: Props) => {
   return (
     <article className="card">
       <div className="flex flex-row justify-between">
@@ -19,8 +19,13 @@ export const Project = ({ project }: Props) => {
         </div>
 
         {project.link && (
-          <a href={project.link} target="_blank" rel="noreferrer">
-            <ExternalLink size={18} className="link" />
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            className="link mt-1"
+          >
+            <ExternalLink size={18} />
           </a>
         )}
       </div>

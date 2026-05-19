@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { projects } from "./projects/data";
-import { Project } from "./projects/project";
+import { ProjectCard } from "./projects/ProjectCard";
 import { Tags } from "@/components/Tags";
 import { Stat } from "@/components/Stat";
 import { ArrowRight } from "lucide-react";
@@ -87,7 +87,7 @@ const Home = () => {
           </div>
 
           <div className="mt-8">
-            <Project project={project} />
+            <ProjectCard project={project} />
           </div>
         </section>
       )}

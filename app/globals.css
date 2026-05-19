@@ -110,9 +110,6 @@
   .responsive-layout {
     @apply flex flex-col md:flex-row gap-6;
   }
-
-  .card-layout {
-  }
 }
 
 body {
