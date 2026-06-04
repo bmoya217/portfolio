@@ -12,6 +12,7 @@ const links = [
   { name: "Experience", href: "/experience" },
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
+  { name: "Resume", href: "/resume.pdf", external: true },
 ];
 
 const getLinkClass = (pathname: string, href: string): string => {
@@ -54,7 +55,10 @@ export const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noreferrer" : undefined}
                 className={getLinkClass(pathname, link.href)}
+                aria-current={pathname === link.href ? "page" : undefined}
               >
                 {link.name}
               </Link>
@@ -86,8 +90,11 @@ export const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noreferrer" : undefined}
                 onClick={() => setMobileOpen(false)}
                 className={getLinkClass(pathname, link.href)}
+                aria-current={pathname === link.href ? "page" : undefined}
               >
                 {link.name}
               </Link>

@@ -17,9 +17,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Branden Moya | Portfolio",
+  title: {
+    default: "Branden Moya | Full Stack Developer",
+    template: "%s | Branden Moya",
+  },
   description:
-    "Full stack developer portfolio for Branden Moya.",
+    "Full stack developer portfolio for Branden Moya, focused on React, TypeScript, GraphQL, billing systems, internal tools, and practical product interfaces.",
+  keywords: [
+    "Branden Moya",
+    "Full Stack Developer",
+    "React Developer",
+    "TypeScript",
+    "Next.js",
+    "GraphQL",
+    "Frontend Engineer",
+  ],
+  authors: [{ name: "Branden Moya" }],
+  creator: "Branden Moya",
+  openGraph: {
+    title: "Branden Moya | Full Stack Developer",
+    description:
+      "React and TypeScript portfolio covering product UI, backend integrations, billing workflows, geospatial tools, and selected projects.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Branden Moya | Full Stack Developer",
+    description:
+      "React and TypeScript portfolio covering product UI, backend integrations, billing workflows, geospatial tools, and selected projects.",
+  },
 };
 
 export default function RootLayout({

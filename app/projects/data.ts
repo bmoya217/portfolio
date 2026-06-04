@@ -5,10 +5,82 @@ export type Project = {
   stack: string[];
   description: string;
   highlights: string[];
+  status?: string;
   link?: string;
 };
 
 export const projects = [
+  {
+    title: "Drops (Raid Loot Optimization Tool)",
+    company: "Personal Project",
+    period: "Dragonflight",
+    stack: [
+      "Next.js",
+      "React",
+      "Google Forms API",
+      "Raidbots",
+      "World of Warcraft",
+      "Data Visualization",
+    ],
+    status:
+      "Used by a World of Warcraft raid team during active progression; no longer used after the team consolidated preparation work in WoW Utils.",
+    description:
+      "Loot planning tool built to turn World of Warcraft player simulation data into practical item-priority decisions for a Hall of Fame raid team.",
+    highlights: [
+      "Collected player simulation data through Google Forms and mapped it into boss, slot, and upgrade views",
+      "Reduced manual spreadsheet upkeep by auto-mapping simulation data across raid tiers",
+      "Built mobile-first filtering and comparison flows for quick decisions during raid prep",
+      "Replaced by a broader WoW Utils workflow covering roster planning, assignments, loot comparisons, cooldowns, and other raid preparation",
+      "Kept old tier data usable when Raidbots purged sims and manual refreshes were needed",
+    ],
+    link: "https://drops-vercel-flax.vercel.app/",
+  },
+
+  {
+    title: "MyViasat / ManageBilling",
+    company: "Viasat",
+    period: "Web & Mobile",
+    stack: ["React", "GraphQL", "REST", "Micro Frontends", "Payment Integration"],
+    description:
+      "Billing and payment management microfrontend used across MyViasat web, mobile, and Salesforce support workflows.",
+    highlights: [
+      "Built billing dashboard flows for balance, payment history, and account payment actions",
+      "Integrated secure payments through an embedded third-party iframe system",
+      "Supported customer-facing and internal-agent experiences from the same product surface",
+      "Collaborated with a separate payment security team on compliant transaction handling",
+    ],
+  },
+
+  {
+    title: "Phoenix GCCS-J Prototype",
+    company: "Moebius Solutions",
+    period: "Geospatial Prototype",
+    stack: ["TypeScript", "React", "Leaflet", "Cesium", "GraphQL", "Express"],
+    description:
+      "Web-based geospatial visualization platform built on top of CTM data, enabling operators to move between 2D and 3D mapping views.",
+    highlights: [
+      "Integrated CTM backend data into a modern web visualization layer",
+      "Built 2D map interactions with Leaflet and 3D visualization with Cesium",
+      "Created GraphQL and Express services for user overlays and preference storage",
+      "Helped modernize defense-oriented situational awareness workflows in the browser",
+    ],
+  },
+
+  {
+    title: "PAC Customer Self Care",
+    company: "Viasat",
+    period: "Enterprise Systems",
+    stack: ["GraphQL", "REST APIs", "Internal Backend Systems"],
+    description:
+      "Backend integration layer for customer self-service systems during a transition away from external BEP storage and toward internal services.",
+    highlights: [
+      "Built REST-to-backend service layer between frontend clients and internal GraphQL systems",
+      "Handled customer flows such as addon purchase, cart creation, and account linking",
+      "Supported a migration away from legacy external data storage systems",
+      "Worked across frontend and backend boundaries to keep account workflows reliable",
+    ],
+  },
+
   {
     title: "Common Track Manager",
     company: "Moebius Solutions",
@@ -23,75 +95,16 @@ export const projects = [
   },
 
   {
-    title: "Phoenix GCCS J Prototype",
-    company: "Moebius Solutions",
-    period: "Follow-up project",
-    stack: ["Typescript", "React", "Leaflet", "Cesium", "GraphQL", "Express"],
-    description:
-      "Web-based geospatial visualization platform built on top of CTM data, enabling both 2D and 3D mapping views.",
-    highlights: [
-      "Integrated CTM backend data into web visualization layer",
-      "Built 2D mapping interface using Leaflet",
-      "Implemented 3D geospatial visualization using Cesium",
-      "Created microservices for user overlays and preferences storage",
-    ],
-  },
-
-  {
-    title: "PAC Customer Self Care",
-    company: "Viasat",
-    period: "Enterprise Systems",
-    stack: ["GraphQL", "REST APIs", "Internal Backend Systems"],
-    description:
-      "Backend integration layer for customer self-service systems during transition from external BEP storage to internal backend services.",
-    highlights: [
-      "Built REST-to-backend service layer acting as middle-tier between frontend and internal GraphQL systems",
-      "Handled flows such as addon purchase, cart creation, and account linking",
-      "Supported transition away from legacy external data storage systems",
-    ],
-  },
-
-  {
-    title: "MyViasat / ManageBilling",
-    company: "Viasat",
-    period: "Web & Mobile",
-    stack: ["React", "GraphQL", "REST", "iFrame payment integration"],
-    description:
-      "Billing and payment management microfrontend for MyViasat web, mobile application and Salesforce customer support.",
-    highlights: [
-      "Built billing dashboard including balance, payment history, and payment actions",
-      "Integrated secure payment flow via embedded third-party iframe system",
-      "Worked alongside separate payment security team for compliant transaction handling",
-    ],
-  },
-
-  {
-    title: "Drops (Raid Loot Optimization Tool)",
-    company: "Personal Project",
-    period: "Ongoing / Iterative",
-    stack: ["Next.js", "React", "Google Forms API", "Data Visualization"],
-    description:
-      "Web tool built for optimizing World of Warcraft raid loot distribution using Raidbots simulation data.",
-    highlights: [
-      "Built workflow to collect player simulation data via Google Forms",
-      "Created dynamic filtering system by boss, item slot, and player performance",
-      "Implemented responsive UI with mobile-first table redesign",
-      "Evolved system to auto-map simulation data, reducing manual maintenance per raid tier",
-    ],
-    link: "https://drops-vercel-flax.vercel.app/",
-  },
-
-  {
     title: "This Portfolio",
     company: "Personal Project",
     period: "Current",
-    stack: ["Next.js", "React", "Tailwind CSS"],
+    stack: ["Next.js", "React", "Tailwind CSS", "Accessibility"],
     description:
-      "Personal portfolio website showcasing projects, experience, and frontend engineering ability.",
+      "Personal portfolio website showcasing product-minded engineering work, practical UI systems, and full stack experience.",
     highlights: [
-      "Built responsive UI with modern layout system",
-      "Implemented animated hero interactions and navigation system",
-      "Focused on clean UX, readability, and performance",
+      "Built a responsive App Router site with reusable project, experience, and tag components",
+      "Focused the content around shipped work, technical judgment, and recruiter-friendly navigation",
+      "Added accessibility details, theme support, metadata, and concise conversion paths",
     ],
   },
 ];

@@ -24,6 +24,7 @@ export const ProjectCard = ({ project }: Props) => {
             target="_blank"
             rel="noreferrer"
             className="link mt-1"
+            aria-label={`Open ${project.title}`}
           >
             <ExternalLink size={18} />
           </a>
@@ -31,6 +32,7 @@ export const ProjectCard = ({ project }: Props) => {
       </div>
 
       <div>
+        {project.status && <p className="status-note">{project.status}</p>}
         <p className="card-description">{project.description}</p>
         <Highlights items={project.highlights} />
       </div>

@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { projects } from "./data";
 import { ProjectCard } from "./ProjectCard";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Selected projects from Branden Moya across React, TypeScript, GraphQL, billing systems, geospatial visualization, and internal tooling.",
+};
 
 const Projects = () => {
   return (

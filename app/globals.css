@@ -68,11 +68,15 @@
   }
 
   .card {
-    @apply rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted space-y-4 md:space-y-8 p-6;
+    @apply rounded-2xl border border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted space-y-4 md:space-y-8 p-6;
   }
 
   .card-header {
     @apply text-card-foreground text-xl font-semibold;
+  }
+
+  .card-kicker {
+    @apply text-xs font-medium uppercase tracking-widest text-muted;
   }
 
   .card-subheader {
@@ -101,6 +105,22 @@
 
   .tag {
     @apply rounded-full border border-border px-3 py-1 text-sm text-muted;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-opacity hover:opacity-85;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-muted;
+  }
+
+  .proof-item {
+    @apply rounded-xl border border-border bg-background/40 p-4 leading-7 text-muted;
+  }
+
+  .status-note {
+    @apply mb-4 rounded-xl border border-border bg-background/40 px-4 py-3 text-sm font-medium leading-6 text-card-foreground;
   }
 
   .link {
