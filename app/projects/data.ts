@@ -33,7 +33,7 @@ export const projects = [
       "Replaced by a broader WoW Utils workflow covering roster planning, assignments, loot comparisons, cooldowns, and other raid preparation",
       "Kept old tier data usable when Raidbots purged sims and manual refreshes were needed",
     ],
-    link: "https://drops-vercel-flax.vercel.app/",
+    link: "https://trk-drops.vercel.app/",
   },
 
   {
