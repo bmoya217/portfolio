@@ -13,25 +13,25 @@ export const projects = [
   {
     title: "Drops (Raid Loot Optimization Tool)",
     company: "Personal Project",
-    period: "Dragonflight",
+    period: "2022 – Present",
     stack: [
       "Next.js",
       "React",
-      "Google Forms API",
-      "Raidbots",
-      "World of Warcraft",
-      "Data Visualization",
+      "TypeScript",
+      "Redux Toolkit",
+      "MUI",
+      "Google Sheets API",
     ],
     status:
-      "Used by a World of Warcraft raid team during active progression; no longer used after the team consolidated preparation work in WoW Utils.",
+      "Built for and actively used by a progression raid team. Currently in demo mode between tiers.",
     description:
-      "Loot planning tool built to turn World of Warcraft player simulation data into practical item-priority decisions for a Hall of Fame raid team.",
+      "A data aggregation and visualization tool that collects player simulation report URLs via Google Forms, fetches and validates the underlying data from an external API, and presents it as filterable grouped views for loot priority decisions during raid preparation.",
     highlights: [
-      "Collected player simulation data through Google Forms and mapped it into boss, slot, and upgrade views",
-      "Reduced manual spreadsheet upkeep by auto-mapping simulation data across raid tiers",
-      "Built mobile-first filtering and comparison flows for quick decisions during raid prep",
-      "Replaced by a broader WoW Utils workflow covering roster planning, assignments, loot comparisons, cooldowns, and other raid preparation",
-      "Kept old tier data usable when Raidbots purged sims and manual refreshes were needed",
+      "Players submit simulation report URLs weekly through a Google Form; the app pulls all submissions from a connected Google Sheet and fetches each report through Next.js API routes",
+      "Validates and filters reports before they reach the UI — bad or misconfigured sims are discarded silently",
+      "Normalizes external JSON payloads into boss-grouped and player-grouped rows with table, list, and chart views",
+      "UI state managed with Redux Toolkit; theme and data-view preferences persisted via local storage and cookies so server-rendered defaults match the client",
+      "Boss and encounter data updated each content tier to keep the tool current",
     ],
     link: "https://trk-drops.vercel.app/",
   },
@@ -40,7 +40,13 @@ export const projects = [
     title: "MyViasat / ManageBilling",
     company: "Viasat",
     period: "Web & Mobile",
-    stack: ["React", "GraphQL", "REST", "Micro Frontends", "Payment Integration"],
+    stack: [
+      "React",
+      "GraphQL",
+      "REST",
+      "Micro Frontends",
+      "Payment Integration",
+    ],
     description:
       "Billing and payment management microfrontend used across MyViasat web, mobile, and Salesforce support workflows.",
     highlights: [
