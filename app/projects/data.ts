@@ -13,7 +13,7 @@ export const projects = [
   {
     title: "Drops (Raid Loot Optimization Tool)",
     company: "Personal Project",
-    period: "2022 – Present",
+    period: "2022 - Present",
     stack: [
       "Next.js",
       "React",
