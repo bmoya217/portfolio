@@ -28,12 +28,15 @@ const Experience = () => {
 
       <section className="card">
         <p className="card-kicker">Currently</p>
-        <h2 className="card-header">Focused on frontend-heavy full stack roles</h2>
+        <h2 className="card-header">
+          Focused on frontend-heavy full stack roles
+        </h2>
         <p className="card-description">
-          Recently I have been sharpening this portfolio and revisiting personal
-          projects like Drops, while looking for product engineering, internal
-          tooling, and platform UI work where React and backend integration both
-          matter.
+          After taking time away from full-time engineering for family
+          responsibilities, I'm focused on returning to product engineering,
+          internal tooling, and platform UI work where React and backend
+          integration both matter. I've used part of this time to sharpen this
+          portfolio and revisit projects like Drops.
         </p>
       </section>
 
